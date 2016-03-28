@@ -12,3 +12,17 @@ C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.Properties.Resources.reso
 C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.csproj.GenerateResource.Cache
 C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.exe
 C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.pdb
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\ClienteChat.exe.config
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.exe
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.pdb
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\ClienteChat.exe
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\ClienteChat.pdb
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\EngineIoClientDotNet.dll
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\Newtonsoft.Json.dll
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\SocketIoClientDotNet.dll
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\WebSocket4Net.dll
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\bin\Debug\Newtonsoft.Json.xml
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.csprojResolveAssemblyReference.cache
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.Form1.resources
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.Properties.Resources.resources
+C:\sockets-client-github\leninSocket\ClienteChat\ClienteChat\obj\Debug\ClienteChat.csproj.GenerateResource.Cache

@@ -26,11 +26,12 @@ namespace ClienteChat
             {
                socket.Emit("hi","hola mundo");
                 
-                /*socket.On("hi", (data) =>
+                socket.On("respuesta", (data) =>
                 {
-                   // Console.WriteLine(data);
+                   Console.WriteLine(data);
+                   MessageBox.Show(data.ToString());
                     socket.Disconnect();
-                });*/
+                });
             });
             Console.ReadLine();
 
