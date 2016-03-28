@@ -1,0 +1,14 @@
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\ClienteChat.exe.config
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\ClienteChat.exe
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\ClienteChat.pdb
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\EngineIoClientDotNet.dll
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\Newtonsoft.Json.dll
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\SocketIoClientDotNet.dll
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\WebSocket4Net.dll
+C:\lenin\ClienteChat\ClienteChat\bin\Debug\Newtonsoft.Json.xml
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.csprojResolveAssemblyReference.cache
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.Form1.resources
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.Properties.Resources.resources
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.csproj.GenerateResource.Cache
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.exe
+C:\lenin\ClienteChat\ClienteChat\obj\Debug\ClienteChat.pdb
