@@ -16,6 +16,16 @@ namespace ClienteChat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Conexion con = Conexion.getInstance;
+
+            con.socket.On("respuesta", (data) =>
+            {
+                Console.WriteLine(data);
+                con.socket.Disconnect();
+            });
+
+            Console.ReadLine();
+
             Application.Run(new Form1());
         }
     }

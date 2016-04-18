@@ -21,23 +21,22 @@ namespace ClienteChat
         private void button1_Click(object sender, EventArgs e)
         {
 
-            var socket = IO.Socket("http://localhost:3000");
-            socket.On(Socket.EVENT_CONNECT, () =>
+            MessageBox.Show("Hola");
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Conexion con = Conexion.getInstance;
+
+            con.socket.On("respuesta", (data) =>
             {
-               socket.Emit("hi","hola mundo");
-                
-                socket.On("respuesta", (data) =>
-                {
-                   Console.WriteLine(data);
-                   MessageBox.Show(data.ToString());
-                    socket.Disconnect();
-                });
+                Console.WriteLine(data);
+                MessageBox.Show(data.ToString());
+                con.socket.Disconnect();
             });
+
             Console.ReadLine();
-
-
-
-
         }
     }
 }
