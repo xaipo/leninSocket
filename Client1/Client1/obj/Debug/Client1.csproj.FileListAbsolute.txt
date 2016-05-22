@@ -1,0 +1,15 @@
+C:\lenin\Client1\Client1\bin\Debug\Client1.exe.config
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\Client1.exe.config
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.csprojResolveAssemblyReference.cache
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.Properties.Resources.resources
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.csproj.GenerateResource.Cache
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\Client1.exe
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\Client1.pdb
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\EngineIoClientDotNet.dll
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\SocketIoClientDotNet.dll
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\WebSocket4Net.dll
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.exe
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.pdb
+C:\Users\Lench0\Documents\GitHub\leninSocket\Client1\Client1\obj\Debug\Client1.FormClie.resources

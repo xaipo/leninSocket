@@ -10,22 +10,29 @@ app.get('/', function(req, res){
 });
 var macs = [];
 io.on('connection', function(socket){
-    console.log('a user connected');
 
+    console.log('a user connected');
     socket.on('enviomac', function(msg){
         console.log(msg);
         macs.push(msg);
-        socket.emit('respuesta', 'hola');
+        //socket.emit('respuesta', macs);
         console.log(macs);
     });
 
-    socket.on('desbloquear', function(msg){
-        console.log(msg);
-        socket.emit('desbloqueo', 'hola');
+    socket.on("desbloquear", function(msg){
+        console.log("el mensaje es "+msg);
+        socket.broadcast.emit("mensaje", msg);
     });
 
+    socket.on('devuelve', function(msg){
+        console.log(msg);
+        socket.broadcast.emit('estado', msg);
+        console.log(msg);
+    });
+
+
     socket.on('disconnect', function(){
-console.log('user disconnected');
+console.log('user disconnected ' +  'Usuario Admin');
 });
 });
 
