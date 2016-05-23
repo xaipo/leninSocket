@@ -20,12 +20,20 @@ namespace ClienteChat
             InitializeComponent();
             bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744082_computer.ico");
             bttonpc1.Visible = false;
-            CheckForIllegalCrossThreadCalls = false;   
+            CheckForIllegalCrossThreadCalls = false;
+            Login frmAbout = new Login();
+            frmAbout.ShowDialog();
         }
         public void btn_Encender()
         {
 
             this.bttonpc1.Visible = true;
+
+        }
+        public void btn_Apagar()
+        {
+
+            this.bttonpc1.Visible = false;
 
         }
 

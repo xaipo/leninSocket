@@ -54,3 +54,4 @@ C:\Users\Lench0\Documents\GitHub\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\
 C:\Users\Lench0\Documents\GitHub\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Properties.Resources.resources
 C:\Users\Lench0\Documents\GitHub\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.csproj.GenerateResource.Cache
 C:\Users\Lench0\Documents\GitHub\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.FormAdmin.resources
+C:\Users\Lench0\Documents\GitHub\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Login.resources

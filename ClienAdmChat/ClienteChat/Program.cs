@@ -83,6 +83,18 @@ namespace ClienteChat
 
 
                 });
+                conect.socket.On("desco_clie", (data) =>
+                {
+                    string val = data.ToString();
+                        myform.btn_Apagar();
+                        MessageBox.Show("Bloquedo");
+                        flag = false;
+
+
+
+                });
+
+
                 //  MessageBox.Show("Failed To Connect To Server!", "Error!");
            // }
         }  
