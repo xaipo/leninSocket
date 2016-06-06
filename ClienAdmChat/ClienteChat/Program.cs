@@ -83,7 +83,7 @@ namespace ClienteChat
 
 
                 });
-                conect.socket.On("desco_clie", (data) =>
+               conect.socket.On("desco_clie", (data) =>
                 {
                     string val = data.ToString();
                         myform.btn_Apagar();

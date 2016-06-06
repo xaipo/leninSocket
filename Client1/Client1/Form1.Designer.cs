@@ -40,12 +40,13 @@
             this.labelContraseña = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnCerrarSe = new System.Windows.Forms.Button();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNormal
             // 
-            this.btnNormal.Location = new System.Drawing.Point(541, 643);
+            this.btnNormal.Location = new System.Drawing.Point(497, 643);
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(75, 23);
             this.btnNormal.TabIndex = 0;
@@ -62,7 +63,7 @@
             // 
             // btnNotificacion
             // 
-            this.btnNotificacion.Location = new System.Drawing.Point(622, 643);
+            this.btnNotificacion.Location = new System.Drawing.Point(578, 643);
             this.btnNotificacion.Name = "btnNotificacion";
             this.btnNotificacion.Size = new System.Drawing.Size(75, 23);
             this.btnNotificacion.TabIndex = 4;
@@ -72,7 +73,7 @@
             // 
             // btnApagar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(703, 643);
+            this.btnApagar.Location = new System.Drawing.Point(659, 643);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(75, 23);
             this.btnApagar.TabIndex = 5;
@@ -126,12 +127,22 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(460, 643);
+            this.btnIngresar.Location = new System.Drawing.Point(416, 643);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 7;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarSe
+            // 
+            this.btnCerrarSe.Location = new System.Drawing.Point(740, 643);
+            this.btnCerrarSe.Name = "btnCerrarSe";
+            this.btnCerrarSe.Size = new System.Drawing.Size(110, 23);
+            this.btnCerrarSe.TabIndex = 8;
+            this.btnCerrarSe.Text = "Cerrar Sesion";
+            this.btnCerrarSe.UseVisualStyleBackColor = true;
+            this.btnCerrarSe.Click += new System.EventHandler(this.btnCerrarSe_Click);
             // 
             // FormClie
             // 
@@ -139,6 +150,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.Controls.Add(this.btnCerrarSe);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.btnApagar);
@@ -167,6 +179,7 @@
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnCerrarSe;
     }
 }
 

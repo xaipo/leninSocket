@@ -12,7 +12,7 @@ namespace ClienteChat
 {
     public partial class Login : Form
     {
-        FormAdmin frm = new FormAdmin();
+        
         public Login()
         {
             InitializeComponent();
@@ -49,14 +49,25 @@ namespace ClienteChat
 
                     MessageBox.Show("Bienvenido" + "\n" + txtContraseña.Text);
                 }
-               
-                frm.Show();
+                this.Dispose();
+             
 
             }
             else
                 MessageBox.Show("Verifique bien los Datos");
             txtUsuario.Text = "";
             txtContraseña.Text = "";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "";
+            txtContraseña.Text = "";
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

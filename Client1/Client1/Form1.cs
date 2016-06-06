@@ -24,6 +24,7 @@ namespace Client1
             TopMost = true;
             CheckForIllegalCrossThreadCalls = false;
             this.ShowInTaskbar = false;
+            
         }
 
         public void FormClie_Resize()
@@ -132,6 +133,14 @@ namespace Client1
                     e.Cancel = true;
                     break;
             }  
+        }
+
+        private void btnCerrarSe_Click(object sender, EventArgs e)
+        {
+
+            FormClie_Resize_Normal();
+            Program.emitEstado("Bloqueado");
+            
         }
 
       

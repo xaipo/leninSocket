@@ -32,7 +32,7 @@ namespace Client1
                     flag = true;
                     Thread t = new Thread(On);
                     t.Start();
-                    Program.emitEstado("Bloqueado");
+                    emitEstado("Bloqueado");
                     Application.Run(myform);
                 }
                

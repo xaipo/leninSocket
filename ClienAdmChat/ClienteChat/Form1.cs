@@ -62,9 +62,19 @@ namespace ClienteChat
             }
             else
             {
-                bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744101_imac.ico");
-                estado = true;
-                con.socket.Emit("desbloquear", "on");
+                DialogResult opcion;
+                opcion = MessageBox.Show("Seguro que deseas Escoger esta PC", "Escoger PC", MessageBoxButtons.OKCancel);
+                if (opcion == DialogResult.OK)
+                {
+                    bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744101_imac.ico");
+                    estado = true;
+                    con.socket.Emit("desbloquear", "on");
+                }
+                else
+                {
+
+                }
+                
             }
             
            
