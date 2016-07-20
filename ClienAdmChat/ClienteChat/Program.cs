@@ -73,7 +73,6 @@ namespace ClienteChat
                     {
 
                         myform.btn_Encender();
-                        //conect.socket.Emit("esta_admin", "prendido");
                         flag = false;
 
 
@@ -94,8 +93,8 @@ namespace ClienteChat
                     string val = data.ToString();
                     if (val.Equals("encendido"))
                     {
-                        myform.btn_Encender();
-                        //conect.socket.Emit("desbloquear", "off");
+                      
+                        conect.socket.Emit("desbloquear", "off");
 
                     }
 

@@ -13,12 +13,12 @@ namespace ClienteChat
 {
     public partial class FormAdmin : Form
     {
-        bool estado = false;
+       public bool estado = false;
 
         public FormAdmin()
         {
             InitializeComponent();
-            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744082_computer.ico");
+            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
             bttonpc1.Visible = false;
             CheckForIllegalCrossThreadCalls = false;
             Login frmAbout = new Login();
@@ -57,7 +57,7 @@ namespace ClienteChat
             Conexion con = Conexion.getInstance;
             if (estado == true)
             {
-                bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744082_computer.ico");
+                bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
                 estado = false;
                 con.socket.Emit("desbloquear", "off");
             }
@@ -67,7 +67,7 @@ namespace ClienteChat
                 opcion = MessageBox.Show("Seguro que deseas Escoger esta PC", "Escoger PC", MessageBoxButtons.OKCancel);
                 if (opcion == DialogResult.OK)
                 {
-                    bttonpc1.BackgroundImage = Image.FromFile(@"C:\Users\Lench0\Desktop\1463744101_imac.ico");
+                    bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744101_imac.ico");
                     estado = true;
                     con.socket.Emit("desbloquear", "on");
                 }

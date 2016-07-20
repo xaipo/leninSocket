@@ -31,7 +31,7 @@ namespace Client1
                     socket.Emit("enviomac", macAddr);
                    this.isConnect = true;
                   // conect.socket.Emit("estado_clie", "encendido");
-                   socket.Emit("estado_clie", "encendido");
+                   
                     
 
                 });

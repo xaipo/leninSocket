@@ -34,6 +34,7 @@ namespace Client1
                     flag = true;
                     Thread t = new Thread(Escucha_cli);
                     t.Start();
+                    conect.socket.Emit("estado_clie", "encendido");
                     
 
                                  
@@ -74,13 +75,18 @@ namespace Client1
                        myform.FormClie_Resize();
                        ControlSecion frmControl = new ControlSecion();
                        frmControl.Show();
-                       MessageBoxTemporal.Show("abriendo...", "Conexion", 1, false);
                         emitEstado("Desbloqueado");
                         flag = false;
                         
                         
                         
                     }
+                });
+
+                    conect.socket.On("mensaje", (data) =>
+                {
+                    
+                    string val = data.ToString();
                     if (val.Equals("off"))
                     {
                         
