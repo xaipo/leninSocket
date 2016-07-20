@@ -42,12 +42,12 @@ namespace ClienteChat
 
                 if ((txtUsuario.Text == "Normal") && (txtContraseña.Text == "000"))
                 {
-                    MessageBox.Show("Bienvenido:  " + "\n" + txtUsuario.Text);
+                  
+                    MessageBoxTemporal.Show("Bienvenido:  " + "\n" + txtUsuario.Text, "Conexion", 1, false);
                 }
                 if ((txtUsuario.Text == "Admin") && (txtContraseña.Text == "000"))
                 {
-
-                    MessageBox.Show("Bienvenido" + "\n" + txtContraseña.Text);
+                    MessageBoxTemporal.Show("Bienvenido:  " + "\n" + txtUsuario.Text, "Conexion", 1, false);
                 }
                 this.Dispose();
              

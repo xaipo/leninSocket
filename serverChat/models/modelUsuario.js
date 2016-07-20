@@ -7,10 +7,10 @@ var mongoose= restful.mongoose;
 var categoriaSchema = new mongoose.Schema({
 
     ci: Number,
-    escuela: String,
     nombre: String,
     estado: String,
     sexo: String,
+    contraseña: String,
     id_escuela: mongoose.Schema.ObjectId,
     id_tipousuario: mongoose.Schema.ObjectId
 

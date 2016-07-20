@@ -23,6 +23,7 @@ namespace ClienteChat
             CheckForIllegalCrossThreadCalls = false;
             Login frmAbout = new Login();
             frmAbout.ShowDialog();
+            
         }
         public void btn_Encender()
         {
@@ -80,6 +81,23 @@ namespace ClienteChat
            
             
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            DialogResult opcion;
+            opcion = MessageBox.Show("Seguro que deseas apagar la PC", "Apagar PC", MessageBoxButtons.OKCancel);
+            if (opcion == DialogResult.OK)
+            {
+                Conexion con = Conexion.getInstance;
+                con.socket.Emit("apagar", "apagar");
+            }
+            else
+            {
+
+            }
+                     
         }
     }
 }

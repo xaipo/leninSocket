@@ -14,22 +14,24 @@ namespace Client1
 {
     public partial class FormClie : Form
     {
-        Conexion con = Conexion.getInstance;
+      //  Conexion con = Conexion.getInstance;
         Boolean estado;
         public FormClie()
         {
             InitializeComponent();
+           
            FormBorderStyle = FormBorderStyle.None;
-           WindowState = FormWindowState.Maximized;
+            WindowState = FormWindowState.Minimized;
             TopMost = true;
             CheckForIllegalCrossThreadCalls = false;
-            this.ShowInTaskbar = false;
+            this.ShowInTaskbar = false;         
+           
             
         }
 
         public void FormClie_Resize()
         {
-           
+           //-- para minimizar la app a la barra de notificaciones
             this.Visible = false;
             NotificacionIcon.Visible = true;
             
@@ -41,11 +43,6 @@ namespace Client1
             this.Show();
 
             this.WindowState = FormWindowState.Maximized;
-
-            //Ocultamos el icono de la bandeja de sistema
-
-            NotificacionIcon.Visible = false;
-            
 
         }
         private void formFactura_FormClosing(object sender, FormClosingEventArgs e)
@@ -105,6 +102,8 @@ namespace Client1
         private void button2_Click(object sender, EventArgs e)
         {
             FormClie_Resize();
+            ControlSecion frmControl = new ControlSecion();
+            frmControl.Show();
            
         }
 
@@ -142,7 +141,6 @@ namespace Client1
             Program.emitEstado("Bloqueado");
             
         }
-
       
     }
 }

@@ -22,18 +22,21 @@ namespace Client1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             myform = new FormClie();
+          
             
             bool flag = false;
             try
             {
+
                 conect = Conexion.getInstance;
                 if (conect.isConnect)
                 {
                     flag = true;
-                    Thread t = new Thread(On);
+                    Thread t = new Thread(Escucha_cli);
                     t.Start();
-                    emitEstado("Bloqueado");
-                    Application.Run(myform);
+                    
+
+                                 
                 }
                
             }
@@ -44,7 +47,9 @@ namespace Client1
             }
             if (flag == true)
             {
-                MessageBox.Show("Connect To Server!", "EXITO!");
+                MessageBoxTemporal.Show("Connect To Server!", "EXITO!", 2, false);
+                //-- Ejecuta la app
+                Application.Run(myform);               
             }
             else
             {
@@ -54,20 +59,22 @@ namespace Client1
                        
         }
 
-        public static void On()
+        public static void Escucha_cli()
         {
-            Boolean flag = true;
+            Boolean flag = true;          
            // while (flag)
           //  {
-              
                 conect.socket.On("mensaje", (data) =>
                 {
+                    
                     string val = data.ToString();
                     if (val.Equals("on"))
                     {
 
-                        
-                        myform.FormClie_Resize();
+                       myform.FormClie_Resize();
+                       ControlSecion frmControl = new ControlSecion();
+                       frmControl.Show();
+                       MessageBoxTemporal.Show("abriendo...", "Conexion", 1, false);
                         emitEstado("Desbloqueado");
                         flag = false;
                         
@@ -84,6 +91,30 @@ namespace Client1
                     
 
                 });
+
+                conect.socket.On("apagarse", (data) =>
+                {
+                    string val = data.ToString();
+                    if (val.Equals("apagar"))
+                    {
+                        ApagarPC apg = new ApagarPC();
+                        apg.Shut_Down();
+
+                    }
+
+                });
+
+                conect.socket.On("mensajito", (data) =>
+                {
+                    string val = data.ToString();
+                    if (val.Equals("prendido"))
+                    {
+                        myform.FormClie_Resize_Normal();
+                        emitEstado("Bloqueado");
+                        
+                    }
+                  
+                });
               //  MessageBox.Show("Failed To Connect To Server!", "Error!");
             //}
         }
@@ -94,7 +125,6 @@ namespace Client1
             conect.socket.Emit("devuelve", msg);
 
         }
-
        
     }
 }

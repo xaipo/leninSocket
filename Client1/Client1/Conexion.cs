@@ -23,34 +23,21 @@ namespace Client1
 
         private Conexion()
         {
-            try
-            {
-              
-                
-                                
+                           
                 socket.On(Socket.EVENT_CONNECT, () =>
                 {
                     //obtener la mac 
 
                     socket.Emit("enviomac", macAddr);
-                    isConnect = true;
+                   this.isConnect = true;
+                  // conect.socket.Emit("estado_clie", "encendido");
+                   socket.Emit("estado_clie", "encendido");
                     
 
                 });
-
-
-                MessageBox.Show(isConnect.ToString());
                 
-
-            }
-            catch (Exception e)
-            {
-                throw e;
-               // MessageBox.Show(e.ToString(), "Algo salio mal en la conexcion!!");
-                //Application.Exit();
-            }
-
-
+               // MessageBox.Show(isConnect.ToString());
+                MessageBoxTemporal.Show("Conectando...", "Conexion", 1, false);
            
         }
 

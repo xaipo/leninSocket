@@ -7,7 +7,6 @@ var mongoose= restful.mongoose;
 var categoriaSchema = new mongoose.Schema({
 
     descripcion: String,
-    facultad: String,
     id_facultad: mongoose.Schema.ObjectId,
 
 });

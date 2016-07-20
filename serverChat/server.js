@@ -22,6 +22,17 @@ io.on('connection', function(socket){
         console.log(macs);
     });
 
+    socket.on('esta_admin', function(msg){
+        console.log(msg);
+        socket.broadcast.emit('mensajito', msg);
+    });
+
+    socket.on('estado_clie', function(msg){
+        console.log(msg);
+        socket.broadcast.emit('messag', msg);
+    });
+
+
     socket.on("desbloquear", function(msg){
         console.log("el mensaje es "+msg);
         socket.broadcast.emit("mensaje", msg);
@@ -30,7 +41,11 @@ io.on('connection', function(socket){
     socket.on('devuelve', function(msg){
         console.log(msg);
         socket.broadcast.emit('estado', msg);
+    });
+
+    socket.on('apagar', function(msg){
         console.log(msg);
+        socket.broadcast.emit('apagarse', msg);
     });
 
 
@@ -38,7 +53,7 @@ io.on('connection', function(socket){
 
         socket.broadcast.emit('desco_clie','down');
         console.log()
-console.log('user disconnected ' +  'Usuario Admin');
+        console.log('user disconnected ' +  'Usuario Admin');
 });
 });
 

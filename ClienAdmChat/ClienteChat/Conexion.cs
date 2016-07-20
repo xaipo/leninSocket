@@ -34,18 +34,19 @@ namespace ClienteChat
                
 
                 socket.Emit("enviomac", macAddr);
-                isConnect = true;
+               // socket.Emit("esta_admin", "prendido");
+              isConnect = true;
 
             });
-            
-           MessageBox.Show(isConnect.ToString());
-
+            //MessageBox.Show(isConnect.ToString());
+            MessageBoxTemporal.Show("Conectando...", "Conexion", 1, false);
+           //isConnect = true;
             }
                catch (Exception e)
                {
                    throw e;
-                   // MessageBox.Show(e.ToString(), "Algo salio mal en la conexcion!!");
-                   //Application.Exit();
+                   MessageBox.Show(e.ToString(), "Algo salio mal en la conexcion!!");
+                   Application.Exit();
                }
         }
 

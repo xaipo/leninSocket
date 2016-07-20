@@ -30,12 +30,24 @@ namespace ClienteChat
             try
             {
                 conect = Conexion.getInstance;
-                if (conect.isConnect)
+                if (conect.isConnect == true)
                 {
                     flag = true;
                     Thread t = new Thread(Escuchar);
                     t.Start();
+                   conect.socket.Emit("esta_admin", "prendido");
+                    
+                }
+                if (flag == true)
+                {
+                    
+                    MessageBoxTemporal.Show("App Adminitrador Conectado!", "Conexion", 1, false);
                     Application.Run(myform);
+                }
+                else
+                {
+                    MessageBox.Show("Error al conectar con el servidor!", "Error!");
+                    Application.Exit();
                 }
 
             }
@@ -44,15 +56,7 @@ namespace ClienteChat
                 MessageBox.Show(e.ToString(), "Algo Ocurrio mal en la conexion!!");
                 Application.Exit();
             }
-            if (flag == true)
-            {
-                MessageBox.Show("App Adminitrador Conectado!", "EXITO!");
-            }
-            else
-            {
-                MessageBox.Show("Error al conectar con el servidor!", "Error!");
-                Application.Exit();
-            }
+           
                       
         }
 
@@ -69,26 +73,43 @@ namespace ClienteChat
                     {
 
                         myform.btn_Encender();
-                        MessageBox.Show("Bloquedo");
+                        //conect.socket.Emit("esta_admin", "prendido");
                         flag = false;
 
 
                     }
+                  
                     if (val.Equals("Desbloqueado"))
                     {
 
-                        MessageBox.Show("Desbloquedo");
+                        MessageBox.Show("Desbloquedo", "Exito");
                         flag = false;
                     }
 
 
                 });
+
+                conect.socket.On("messag", (data) =>
+                {
+                    string val = data.ToString();
+                    if (val.Equals("encendido"))
+                    {
+                        myform.btn_Encender();
+                        //conect.socket.Emit("desbloquear", "off");
+
+                    }
+
+                });
+
                conect.socket.On("desco_clie", (data) =>
                 {
                     string val = data.ToString();
+                    if (val.Equals("Bloqueado"))
+                    {
                         myform.btn_Apagar();
-                        MessageBox.Show("Bloquedo");
+                        MessageBox.Show("Bloquedo2", "Exito");
                         flag = false;
+                    }
 
 
 

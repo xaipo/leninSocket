@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.bttonpc1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnapagar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,7 +67,7 @@
             // bttonpc1
             // 
             this.bttonpc1.Image = ((System.Drawing.Image)(resources.GetObject("bttonpc1.Image")));
-            this.bttonpc1.Location = new System.Drawing.Point(230, 55);
+            this.bttonpc1.Location = new System.Drawing.Point(237, 55);
             this.bttonpc1.Name = "bttonpc1";
             this.bttonpc1.Size = new System.Drawing.Size(37, 41);
             this.bttonpc1.TabIndex = 2;
@@ -77,12 +78,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnapagar);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(0, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(176, 288);
             this.panel1.TabIndex = 3;
+            // 
+            // btnapagar
+            // 
+            this.btnapagar.Location = new System.Drawing.Point(13, 130);
+            this.btnapagar.Name = "btnapagar";
+            this.btnapagar.Size = new System.Drawing.Size(75, 23);
+            this.btnapagar.TabIndex = 2;
+            this.btnapagar.Text = "Apagar";
+            this.btnapagar.UseVisualStyleBackColor = true;
+            this.btnapagar.Click += new System.EventHandler(this.button5_Click);
             // 
             // menuStrip1
             // 
@@ -165,6 +177,7 @@
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnapagar;
     }
 }
 
