@@ -62,9 +62,6 @@ namespace ClienteChat
 
         public static void Escuchar()
         {
-            Boolean flag = true;
-          //  while (flag)
-            //{
 
                 conect.socket.On("estado", (data) =>
                 {
@@ -73,7 +70,6 @@ namespace ClienteChat
                     {
 
                         myform.btn_Encender();
-                        flag = false;
 
 
                     }
@@ -82,7 +78,6 @@ namespace ClienteChat
                     {
 
                         MessageBox.Show("Desbloquedo", "Exito");
-                        flag = false;
                     }
 
 
@@ -107,16 +102,12 @@ namespace ClienteChat
                     {
                         myform.btn_Apagar();
                         MessageBox.Show("Bloquedo2", "Exito");
-                        flag = false;
                     }
 
 
 
                 });
 
-
-                //  MessageBox.Show("Failed To Connect To Server!", "Error!");
-           // }
         }  
 
     }

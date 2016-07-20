@@ -61,10 +61,8 @@ namespace Client1
         }
 
         public static void Escucha_cli()
-        {
-            Boolean flag = true;          
-           // while (flag)
-          //  {
+        {          
+
                 conect.socket.On("mensaje", (data) =>
                 {
                     
@@ -75,11 +73,8 @@ namespace Client1
                        myform.FormClie_Resize();
                        ControlSecion frmControl = new ControlSecion();
                        frmControl.Show();
-                        emitEstado("Desbloqueado");
-                        flag = false;
-                        
-                        
-                        
+                        emitEstado("Desbloqueado");                    
+                                                
                     }
                 });
 
@@ -92,9 +87,7 @@ namespace Client1
                         
                         myform.FormClie_Resize_Normal();
                         emitEstado("Bloqueado");
-                        flag = false;
-                    }
-                    
+                    }                 
 
                 });
 
@@ -121,8 +114,6 @@ namespace Client1
                     }
                   
                 });
-              //  MessageBox.Show("Failed To Connect To Server!", "Error!");
-            //}
         }
 
 
