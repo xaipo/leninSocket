@@ -180,6 +180,7 @@
             this.Name = "ControlSecion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ControlSecion";
+            this.Load += new System.EventHandler(this.ControlSecion_Load);
             this.panelcontrol.ResumeLayout(false);
             this.panelcontrol.PerformLayout();
             this.ResumeLayout(false);

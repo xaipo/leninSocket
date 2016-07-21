@@ -15,15 +15,15 @@ namespace Client1
         /// </summary>
      //   [STAThread]
         static Conexion conect;
+        static FormControl_Single control;
         static FormClie myform;
         static void Main()
         {
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            myform = new FormClie();
-          
-            
+            myform = new FormClie();       
+                     
             bool flag = false;
             try
             {
@@ -34,8 +34,7 @@ namespace Client1
                     flag = true;
                     Thread t = new Thread(Escucha_cli);
                     t.Start();
-                    conect.socket.Emit("estado_clie", "encendido");
-                    
+                   conect.socket.Emit("estado_clie", "encendido");                 
 
                                  
                 }
@@ -70,9 +69,8 @@ namespace Client1
                     if (val.Equals("on"))
                     {
 
-                       myform.FormClie_Resize();
-                       ControlSecion frmControl = new ControlSecion();
-                       frmControl.Show();
+                        myform.FormClie_Resize();
+                      // control = FormControl_Single.getInstance;
                         emitEstado("Desbloqueado");                    
                                                 
                     }
@@ -84,12 +82,26 @@ namespace Client1
                     string val = data.ToString();
                     if (val.Equals("off"))
                     {
-                        
+                     //   myform.FormClie_Resize();
+                        //emitEstado("Bloqueado"); 
                         myform.FormClie_Resize_Normal();
-                        emitEstado("Bloqueado");
                     }                 
 
                 });
+
+                    conect.socket.On("mensaje", (data) =>
+                    {
+
+                        string val = data.ToString();
+                        if (val.Equals("prueba"))
+                        {
+
+                            myform.FormClie_Resize_Prueba();
+                            // control = FormControl_Single.getInstance;
+                            emitEstado("Desbloqueado");
+
+                        }
+                    });
 
                 conect.socket.On("apagarse", (data) =>
                 {

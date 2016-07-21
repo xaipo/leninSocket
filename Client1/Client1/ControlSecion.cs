@@ -25,7 +25,7 @@ namespace Client1
             WindowState = FormWindowState.Normal;
             TopMost = true;
             CheckForIllegalCrossThreadCalls = false;
-            this.ShowInTaskbar = false;       
+            this.ShowInTaskbar = false;     
             tiempo_trans.Start();
             txt_hora_ini.Text = DateTime.Now.ToLongTimeString();
             txt_user.Text = "Usuario sin deficinir";
@@ -41,7 +41,7 @@ namespace Client1
                 {
                     FormClie myform = new FormClie();
                     myform.Show();
-                    Dispose();
+                    Close();
 
                 }       
         }
@@ -85,6 +85,11 @@ namespace Client1
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ControlSecion_Load(object sender, EventArgs e)
         {
 
         }

@@ -16,6 +16,7 @@ namespace Client1
     {
       //  Conexion con = Conexion.getInstance;
         Boolean estado;
+       
         public FormClie()
         {
             InitializeComponent();
@@ -24,7 +25,8 @@ namespace Client1
             WindowState = FormWindowState.Minimized;
             TopMost = true;
             CheckForIllegalCrossThreadCalls = false;
-            this.ShowInTaskbar = false;         
+            this.ShowInTaskbar = false;
+            BackgroundImageLayout = ImageLayout.Stretch;
            
             
         }
@@ -33,16 +35,24 @@ namespace Client1
         {
            //-- para minimizar la app a la barra de notificaciones
             this.Visible = false;
-            NotificacionIcon.Visible = true;
+            //WindowState = FormWindowState.Minimized;
+            ControlSecion frmControl = new ControlSecion();
+            frmControl.Show();          
+            
+           
             
 
         }
         public void FormClie_Resize_Normal()
         {
 
-            this.Show();
+           // this.Show();
+           // this.WindowState = FormWindowState.Maximized;
 
-            this.WindowState = FormWindowState.Maximized;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+            this.Visible = true;
+            TopMost = false;
 
         }
         private void formFactura_FormClosing(object sender, FormClosingEventArgs e)
@@ -87,23 +97,12 @@ namespace Client1
                         
         }
 
-        private void NotificacionIcon_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-            this.Show();
-
-            this.WindowState = FormWindowState.Maximized;
-
-            //Ocultamos el icono de la bandeja de sistema
-
-            NotificacionIcon.Visible = false;
-        }
-
+       
         private void button2_Click(object sender, EventArgs e)
         {
             FormClie_Resize();
-            ControlSecion frmControl = new ControlSecion();
-            frmControl.Show();
+          //  ControlSecion frmControl = new ControlSecion();
+         //   frmControl.Show();
            
         }
 
@@ -140,6 +139,30 @@ namespace Client1
             FormClie_Resize_Normal();
             Program.emitEstado("Bloqueado");
             
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+            // ControlSecion frmControl = new ControlSecion();
+            //frmControl.Show();
+            Prueba Prueba = new Prueba();
+            Prueba.Show();
+
+        }
+        public void FormClie_Resize_Prueba()
+        {
+
+            // this.Show();
+            // this.WindowState = FormWindowState.Maximized;
+
+            
+            WindowState = FormWindowState.Minimized;
+            // ControlSecion frmControl = new ControlSecion();
+            //frmControl.Show();
+            Prueba Prueba = new Prueba();
+            Prueba.Show();
+
         }
       
     }

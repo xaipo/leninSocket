@@ -35,3 +35,4 @@ C:\Lenin\leninSocket\Client1\Client1\obj\Release\Client1.csproj.GenerateResource
 C:\Lenin\leninSocket\Client1\Client1\obj\Release\Client1.exe.manifest
 C:\Lenin\leninSocket\Client1\Client1\obj\Release\Client1.application
 C:\Lenin\leninSocket\Client1\Client1\obj\Release\Client1.ControlSecion.resources
+C:\Lenin\leninSocket\Client1\Client1\obj\Release\Client1.Prueba.resources

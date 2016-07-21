@@ -14,6 +14,7 @@ namespace ClienteChat
     public partial class FormAdmin : Form
     {
        public bool estado = false;
+       Conexion con = Conexion.getInstance;
 
         public FormAdmin()
         {
@@ -24,17 +25,39 @@ namespace ClienteChat
             Login frmAbout = new Login();
             frmAbout.ShowDialog();
             
+            
         }
         public void btn_Encender()
         {
-
+            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
             this.bttonpc1.Visible = true;
+            estado = false;
+            
+
+
+        }
+        public void btn_acceso()
+        {
+            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
+            bttonpc1.Visible = true;
+            estado = false;
+
+
 
         }
         public void btn_Apagar()
         {
 
             this.bttonpc1.Visible = false;
+          
+
+        }
+        public void btn_Usado()
+        {
+            
+            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744101_imac.ico");
+            estado = true;           
+            this.bttonpc1.Visible = true;
 
         }
 
@@ -53,12 +76,10 @@ namespace ClienteChat
 
         private void bttonpc_Click(object sender, EventArgs e)
         {
-            
-            Conexion con = Conexion.getInstance;
+                     
             if (estado == true)
             {
-                bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
-                estado = false;
+                btn_Encender();
                 con.socket.Emit("desbloquear", "off");
             }
             else
@@ -67,8 +88,7 @@ namespace ClienteChat
                 opcion = MessageBox.Show("Seguro que deseas Escoger esta PC", "Escoger PC", MessageBoxButtons.OKCancel);
                 if (opcion == DialogResult.OK)
                 {
-                    bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744101_imac.ico");
-                    estado = true;
+                    btn_Usado();
                     con.socket.Emit("desbloquear", "on");
                 }
                 else
@@ -98,6 +118,12 @@ namespace ClienteChat
 
             }
                      
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            con.socket.Emit("desbloquear", "prueba");
         }
     }
 }

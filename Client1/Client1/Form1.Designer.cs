@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClie));
             this.btnNormal = new System.Windows.Forms.Button();
-            this.NotificacionIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.btnNotificacion = new System.Windows.Forms.Button();
             this.btnApagar = new System.Windows.Forms.Button();
             this.panelLogin = new System.Windows.Forms.Panel();
@@ -53,13 +51,6 @@
             this.btnNormal.Text = "Normal";
             this.btnNormal.UseVisualStyleBackColor = true;
             this.btnNormal.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // NotificacionIcon
-            // 
-            this.NotificacionIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotificacionIcon.Icon")));
-            this.NotificacionIcon.Text = "notifyIcon1";
-            this.NotificacionIcon.Visible = true;
-            this.NotificacionIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotificacionIcon_MouseDoubleClick);
             // 
             // btnNotificacion
             // 
@@ -133,6 +124,7 @@
             this.btnIngresar.TabIndex = 7;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // btnCerrarSe
             // 
@@ -149,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.btnCerrarSe);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.panelLogin);
@@ -170,7 +162,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnNormal;
-        private System.Windows.Forms.NotifyIcon NotificacionIcon;
         private System.Windows.Forms.Button btnNotificacion;
         private System.Windows.Forms.Button btnApagar;
         private System.Windows.Forms.Panel panelLogin;

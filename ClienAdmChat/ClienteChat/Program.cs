@@ -70,8 +70,7 @@ namespace ClienteChat
                     {
 
                         myform.btn_Encender();
-
-
+                        
                     }
                   
                     if (val.Equals("Desbloqueado"))
@@ -88,8 +87,8 @@ namespace ClienteChat
                     string val = data.ToString();
                     if (val.Equals("encendido"))
                     {
-                      
-                        conect.socket.Emit("desbloquear", "off");
+                        myform.btn_acceso();
+                       conect.socket.Emit("desbloquear", "off");
 
                     }
 
