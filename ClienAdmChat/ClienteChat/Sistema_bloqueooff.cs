@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ClienteChat
+{
+    public partial class Sistema_bloqueooff : Form
+    {
+        public Sistema_bloqueooff()
+        {
+            InitializeComponent();
+        }
+
+        private void btncancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

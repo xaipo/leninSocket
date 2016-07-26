@@ -16,7 +16,7 @@ namespace Client1
      //   [STAThread]
         static Conexion conect;
         static FormControl_Single control;
-        static FormClie myform;
+         static FormClie myform;
         static void Main()
         {
             
@@ -49,7 +49,10 @@ namespace Client1
             {
                 MessageBoxTemporal.Show("Connect To Server!", "EXITO!", 2, false);
                 //-- Ejecuta la app
-                Application.Run(myform);               
+              Application.Run(myform);
+              myform.ShowDialog();
+
+             
             }
             else
             {
@@ -82,9 +85,8 @@ namespace Client1
                     string val = data.ToString();
                     if (val.Equals("off"))
                     {
-                     //   myform.FormClie_Resize();
-                        //emitEstado("Bloqueado"); 
                         myform.FormClie_Resize_Normal();
+                      //  emitEstado("Bloqueado"); 
                     }                 
 
                 });

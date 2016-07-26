@@ -14,6 +14,7 @@ namespace ClienteChat
     public partial class FormAdmin : Form
     {
        public bool estado = false;
+       public bool op = false;
        Conexion con = Conexion.getInstance;
 
         public FormAdmin()
@@ -32,17 +33,6 @@ namespace ClienteChat
             bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
             this.bttonpc1.Visible = true;
             estado = false;
-            
-
-
-        }
-        public void btn_acceso()
-        {
-            bttonpc1.BackgroundImage = Image.FromFile(@"C:\Lenin\leninSocket\ClienAdmChat\icons\1463744082_computer.ico");
-            bttonpc1.Visible = true;
-            estado = false;
-
-
 
         }
         public void btn_Apagar()
@@ -79,8 +69,7 @@ namespace ClienteChat
                      
             if (estado == true)
             {
-                btn_Encender();
-                con.socket.Emit("desbloquear", "off");
+                MessageBoxTemporal.Show("Pc ya esta en uso!", "Estado", 1, false);
             }
             else
             {
@@ -90,10 +79,6 @@ namespace ClienteChat
                 {
                     btn_Usado();
                     con.socket.Emit("desbloquear", "on");
-                }
-                else
-                {
-
                 }
                 
             }
@@ -124,6 +109,48 @@ namespace ClienteChat
         {
             
             con.socket.Emit("desbloquear", "prueba");
+        }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btntiempo_Click(object sender, EventArgs e)
+        {
+            if (op == true)
+            {
+                
+                Sistema_bloqueooff frmAbout = new Sistema_bloqueooff();
+                frmAbout.Show();
+                btn_tiempoOFF();
+                op = false;
+
+            }
+            else
+            {
+                
+                Sistema_bloqueo frmAbout = new Sistema_bloqueo();
+                frmAbout.Show();
+                btn_tiempoON();
+                op = true;
+
+            }
+            
+        }
+        public void btn_tiempoON()
+        {
+            btntiempo.BackColor = Color.RosyBrown;
+        }
+
+        public void btn_tiempoOFF()
+        {
+            btntiempo.BackColor = Color.LightSteelBlue;
         }
     }
 }

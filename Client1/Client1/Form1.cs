@@ -35,9 +35,10 @@ namespace Client1
         {
            //-- para minimizar la app a la barra de notificaciones
             this.Visible = false;
-            //WindowState = FormWindowState.Minimized;
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Minimized;
             ControlSecion frmControl = new ControlSecion();
-            frmControl.Show();          
+            frmControl.ShowDialog();          
             
            
             
@@ -49,10 +50,11 @@ namespace Client1
            // this.Show();
            // this.WindowState = FormWindowState.Maximized;
 
-            FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized;
-            this.Visible = true;
-            TopMost = false;
+          FormBorderStyle = FormBorderStyle.None;
+          WindowState = FormWindowState.Normal;
+           //this.Visible = true;
+            TopMost = true;        
+            
 
         }
         private void formFactura_FormClosing(object sender, FormClosingEventArgs e)

@@ -17,6 +17,7 @@ namespace Client1
         int seg;
         int min;
         int hor;
+        static FormClie myform; 
         public ControlSecion()
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace Client1
             txt_hora_ini.Text = DateTime.Now.ToLongTimeString();
             txt_user.Text = "Usuario sin deficinir";
             Posicionar();
+            myform = new FormClie(); 
+
             
         }
 
@@ -39,9 +42,11 @@ namespace Client1
                 opcion = MessageBox.Show("Seguro que deseas Cerrar Sesion", "Escoger PC", MessageBoxButtons.OKCancel);
                 if (opcion == DialogResult.OK)
                 {
-                    FormClie myform = new FormClie();
-                    myform.Show();
-                    Close();
+                    myform.FormClie_Resize_Normal();
+                    Program.emitEstado("Bloqueado");
+                    myform.ShowDialog();
+                    this.Close();
+                    
 
                 }       
         }

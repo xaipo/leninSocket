@@ -79,19 +79,6 @@ namespace ClienteChat
                         MessageBox.Show("Desbloquedo", "Exito");
                     }
 
-
-                });
-
-                conect.socket.On("messag", (data) =>
-                {
-                    string val = data.ToString();
-                    if (val.Equals("encendido"))
-                    {
-                        myform.btn_acceso();
-                       conect.socket.Emit("desbloquear", "off");
-
-                    }
-
                 });
 
                conect.socket.On("desco_clie", (data) =>
@@ -103,11 +90,18 @@ namespace ClienteChat
                         MessageBox.Show("Bloquedo2", "Exito");
                     }
 
-
-
                 });
 
-        }  
+               conect.socket.On("messag", (data) =>
+               {
+                   string val = data.ToString();
+                   if (val.Equals("encendido"))
+                   {
+                       myform.btn_Encender();
+                       conect.socket.Emit("desbloquear", "off");
+                   }
 
+               });
+        }
     }
 }
