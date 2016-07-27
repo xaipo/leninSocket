@@ -15,6 +15,7 @@ namespace ClienteChat
     {
        public bool estado = false;
        public bool op = false;
+       public bool op1 = false;
        Conexion con = Conexion.getInstance;
 
         public FormAdmin()
@@ -90,8 +91,11 @@ namespace ClienteChat
 
         private void button5_Click(object sender, EventArgs e)
         {
+            
+                Sistema_Apagar frmAbout = new Sistema_Apagar(this);
+                frmAbout.Show();
 
-            DialogResult opcion;
+           /* DialogResult opcion;
             opcion = MessageBox.Show("Seguro que deseas apagar la PC", "Apagar PC", MessageBoxButtons.OKCancel);
             if (opcion == DialogResult.OK)
             {
@@ -101,7 +105,7 @@ namespace ClienteChat
             else
             {
 
-            }
+            }*/
                      
         }
 
@@ -126,31 +130,84 @@ namespace ClienteChat
             if (op == true)
             {
                 
-                Sistema_bloqueooff frmAbout = new Sistema_bloqueooff();
-                frmAbout.Show();
-                btn_tiempoOFF();
-                op = false;
-
+               Sistema_bloqueooff frmAbout = new Sistema_bloqueooff(this);
+               frmAbout.Show();
+              
             }
             else
             {
                 
-                Sistema_bloqueo frmAbout = new Sistema_bloqueo();
+                Sistema_bloqueo frmAbout = new Sistema_bloqueo(this);
                 frmAbout.Show();
-                btn_tiempoON();
-                op = true;
-
+               
             }
             
         }
         public void btn_tiempoON()
         {
             btntiempo.BackColor = Color.RosyBrown;
+            op = true;
+
         }
 
         public void btn_tiempoOFF()
         {
             btntiempo.BackColor = Color.LightSteelBlue;
+            op = false;
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult opcion;
+            opcion = MessageBox.Show("Seguro que deseas reiniciar las PCs", "Reiniciar PC", MessageBoxButtons.OKCancel);
+            if (opcion == DialogResult.OK)
+            {
+                Conexion con = Conexion.getInstance;
+                con.socket.Emit("apagar", "reiniciar");
+            }
+            
+        }
+
+        private void btnUsoLibre_Click(object sender, EventArgs e)
+        {
+            
+            if (op1 == true)
+            {
+
+                DialogResult opcion;
+                opcion = MessageBox.Show("Desea cancelar el uso libre a todas las PCs? ", "Uso libre de PCs", MessageBoxButtons.OKCancel);
+                if (opcion == DialogResult.OK)
+                {
+                   btn_LibreOFF();
+                    
+                }
+
+            }
+            else
+            {
+                DialogResult opcion;
+                opcion = MessageBox.Show("Desea dar uso libre a todas las PCs? ", "Uso libre de PCs", MessageBoxButtons.OKCancel);
+                if (opcion == DialogResult.OK)
+                {
+                    btn_LibreON();
+                    
+                }
+
+            }
+
+        }
+        public void btn_LibreON()
+        {
+            btnUsoLibre.BackColor = Color.RosyBrown;
+            op1 = true;
+
+        }
+        public void btn_LibreOFF()
+        {
+            btnUsoLibre.BackColor = Color.LightSteelBlue;
+            op1 = true;
+
         }
     }
 }

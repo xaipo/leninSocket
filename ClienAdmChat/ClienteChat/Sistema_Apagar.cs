@@ -10,26 +10,29 @@ using System.Windows.Forms;
 
 namespace ClienteChat
 {
-    public partial class Sistema_bloqueooff : Form
+    public partial class Sistema_Apagar : Form
     {
         FormAdmin formAcceso;
-        public Sistema_bloqueooff(FormAdmin padre)
+        public Sistema_Apagar(FormAdmin padre)
         {
             InitializeComponent();
             formAcceso = padre;
         }
-        private void btnbloquear_Click(object sender, EventArgs e)
+
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            formAcceso.btn_tiempoOFF();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btncancelar_Click(object sender, EventArgs e)
+        private void btnNow_Click(object sender, EventArgs e)
         {
-            formAcceso.btn_tiempoON();
-            this.Close();
+            Conexion con = Conexion.getInstance;
+            con.socket.Emit("apagar", "apagar");
         }
-
-       
     }
 }

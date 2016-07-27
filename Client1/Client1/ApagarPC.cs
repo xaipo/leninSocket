@@ -25,28 +25,72 @@ namespace Client1
             {                    
                 if(date1.ToLongTimeString() != DateTime.Now.ToLongTimeString())
                 {
-                   /* Process proceso = new Process();
-                    proceso.StartInfo.UseShellExecute = false;
-                    proceso.StartInfo.RedirectStandardOutput = true;
-                     // proceso.StartInfo.FileName = "C:\\WINDOWS\\system32\\cmd.exe";
-                   proceso.StartInfo.Arguments = " /c shutdown /H";
-                   // proceso.StartInfo.FileName = "C:\\WINDOWS\\system32\\shutdown.exe";
-                    //proceso.StartInfo.FileName = "shutdown.exe";
-                   proceso.StartInfo.Arguments = this.argumento;
-                    proceso.Start();*/
-
+               
                      Process p = new Process();
-
-            p.EnableRaisingEvents = false;
-            p.StartInfo.FileName = "C:\\WINDOWS\\system32\\cmd.exe";
-            p.StartInfo.Arguments = " /c shutdown /H";
-           
-            p.StartInfo.CreateNoWindow = true;
-            p.Start();
-                    break;
+                     p.EnableRaisingEvents = false;
+                     p.StartInfo.FileName = "C:\\WINDOWS\\system32\\cmd.exe";
+                     p.StartInfo.Arguments = " /c shutdown /s";         
+                     p.StartInfo.CreateNoWindow = true;
+                     p.Start();
+                     break;
                 }
             }
        
+    }
+
+    public void Shut_DownTiempo(int tiempo)
+    {
+
+        while (true)
+        {
+            if (date1.ToLongTimeString() != DateTime.Now.ToLongTimeString())
+            {
+                
+                Process p = new Process();
+                p.EnableRaisingEvents = false;
+                p.StartInfo.FileName = "C:\\WINDOWS\\system32\\cmd.exe";
+                p.StartInfo.Arguments = " /c shutdown -s -t "+ tiempo;
+                p.StartInfo.CreateNoWindow = true;
+                p.Start();
+                break;
+            }
+        }
+
+    }
+
+
+        /*
+         * shutdown -i = Muestra las opciones a realizar pero graficamente. 
+shutdown -l = Solo cierra la sesion en la que se ejecuto el comando. 
+shutdown -s = Apaga el equipo. 
+shutdown -r = Apaga y reinicia el equipo. 
+shutdown -g = Cierra y reinicia el equipo, pero al iniciar reinicia las aplicaciones registradas. 
+shutdown -a = Anula el apagado del sistema, pero este comando solo se puede ejecutar mientras esperamos el tiempo que se determino de espera. 
+shutdown -p = Apaga el equipo pero sin avisar ni con un tiempo de espera. 
+shutdown -h = Este comando hiberna al equipo. 
+shutdown -m = Especifica a que equipo se quiere ejecutar este comando (no sirve el comando -l) 
+shutdown -t = Especifica el tiempo de espera para que se apague. 
+shutdown -c = Es un comentario acerca del reinicio o apagado (shutdown -c "comentario). 
+shutdown -f = Fuerza a las aplicaciones a cerrarse, sin avisarle al usuario antes. */
+
+    public void Reset()
+    {
+
+        while (true)
+        {
+            if (date1.ToLongTimeString() != DateTime.Now.ToLongTimeString())
+            {
+
+                Process p = new Process();
+                p.EnableRaisingEvents = false;
+                p.StartInfo.FileName = "C:\\WINDOWS\\system32\\cmd.exe";
+                p.StartInfo.Arguments = " /c shutdown /r";
+                p.StartInfo.CreateNoWindow = true;
+                p.Start();
+                break;
+            }
+        }
+
     }
     }
 }

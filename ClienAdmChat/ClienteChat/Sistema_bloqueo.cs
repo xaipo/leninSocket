@@ -12,19 +12,22 @@ namespace ClienteChat
 {
     public partial class Sistema_bloqueo : Form
     {
-        
-        public Sistema_bloqueo()
+        FormAdmin formAcceso;
+        public Sistema_bloqueo(FormAdmin padre)
         {
             InitializeComponent();
+            formAcceso = padre;
         }
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-           
+            formAcceso.btn_tiempoON();
+            this.Close();
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
+            formAcceso.btn_tiempoOFF();
             this.Close();
             
 

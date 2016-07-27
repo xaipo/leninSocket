@@ -58,6 +58,7 @@
             this.btnbloquear.TabIndex = 6;
             this.btnbloquear.Text = "Bloquear";
             this.btnbloquear.UseVisualStyleBackColor = true;
+            this.btnbloquear.Click += new System.EventHandler(this.btnbloquear_Click);
             // 
             // panel1
             // 

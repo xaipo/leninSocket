@@ -72,3 +72,4 @@ C:\Lenin\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Properties.R
 C:\Lenin\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.csproj.GenerateResource.Cache
 C:\Lenin\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Sistema_bloqueo.resources
 C:\Lenin\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Sistema_bloqueooff.resources
+C:\Lenin\leninSocket\ClienAdmChat\ClienteChat\obj\Debug\ClienteChat.Sistema_Apagar.resources

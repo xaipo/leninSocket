@@ -114,6 +114,13 @@ namespace Client1
                         apg.Shut_Down();
 
                     }
+                    if (val.Equals("reiniciar"))
+                    {
+                        ApagarPC apg = new ApagarPC();
+                        apg.Reset();
+
+                    }
+                     
 
                 });
 

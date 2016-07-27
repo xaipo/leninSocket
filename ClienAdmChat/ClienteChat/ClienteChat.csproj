@@ -94,6 +94,12 @@
     <Compile Include="MessageBoxTemporal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema_Apagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema_Apagar.Designer.cs">
+      <DependentUpon>Sistema_Apagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sistema_bloqueo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Sistema_Apagar.resx">
+      <DependentUpon>Sistema_Apagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sistema_bloqueo.resx">
       <DependentUpon>Sistema_bloqueo.cs</DependentUpon>
     </EmbeddedResource>

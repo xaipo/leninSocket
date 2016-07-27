@@ -50,7 +50,7 @@
             this.btntiempo = new System.Windows.Forms.Button();
             this.btnUsoLibre = new System.Windows.Forms.Button();
             this.btnreportes = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnreiniciar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -280,6 +280,7 @@
             this.btnUsoLibre.Text = "Uso Libre";
             this.btnUsoLibre.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsoLibre.UseVisualStyleBackColor = false;
+            this.btnUsoLibre.Click += new System.EventHandler(this.btnUsoLibre_Click);
             // 
             // btnreportes
             // 
@@ -295,18 +296,19 @@
             this.btnreportes.UseVisualStyleBackColor = false;
             this.btnreportes.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button1
+            // btnreiniciar
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(12, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 56);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Reiniciar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnreiniciar.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnreiniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnreiniciar.Image")));
+            this.btnreiniciar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnreiniciar.Location = new System.Drawing.Point(12, 312);
+            this.btnreiniciar.Name = "btnreiniciar";
+            this.btnreiniciar.Size = new System.Drawing.Size(69, 56);
+            this.btnreiniciar.TabIndex = 12;
+            this.btnreiniciar.Text = "Reiniciar";
+            this.btnreiniciar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnreiniciar.UseVisualStyleBackColor = false;
+            this.btnreiniciar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // panel3
             // 
@@ -381,7 +383,7 @@
             this.Controls.Add(this.panelPcdispo);
             this.Controls.Add(this.btnapagar);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnreiniciar);
             this.Controls.Add(this.btnreportes);
             this.Controls.Add(this.btnUsoLibre);
             this.Controls.Add(this.btntiempo);
@@ -420,7 +422,7 @@
         private System.Windows.Forms.Button btntiempo;
         private System.Windows.Forms.Button btnUsoLibre;
         private System.Windows.Forms.Button btnreportes;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnreiniciar;
         private System.Windows.Forms.Label txtEscuela;
         private System.Windows.Forms.Label txtUsuarioID;
         private System.Windows.Forms.Label txtUsuarioNom;
